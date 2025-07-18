@@ -1,0 +1,667 @@
+/* AirdropMain Component Styles */
+
+.airdrop-main-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+/* Progress Steps */
+.progress-steps {
+  margin-bottom: 2rem;
+}
+
+.step-indicator {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.step-indicator::before {
+  content: '';
+  position: absolute;
+  top: 20px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: #e9ecef;
+  z-index: 1;
+}
+
+.step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+  background-color: white;
+  padding: 0 1rem;
+}
+
+.step-number {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #e9ecef;
+  color: #6c757d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.step.active .step-number {
+  background-color: #007bff;
+  color: white;
+  box-shadow: 0 2px 8px rgba(0, 123, 255, 0.3);
+}
+
+.step-label {
+  font-size: 0.875rem;
+  color: #6c757d;
+  text-align: center;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.step.active .step-label {
+  color: #007bff;
+  font-weight: 600;
+}
+
+/* Step Content */
+.step-content {
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Card Styles */
+.airdrop-main-container .card {
+  border: none;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  transition: box-shadow 0.3s ease;
+}
+
+.airdrop-main-container .card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.airdrop-main-container .card-header {
+  background-color: #f8f9fa;
+  border-bottom: 1px solid #e9ecef;
+  border-radius: 8px 8px 0 0;
+  padding: 1rem 1.25rem;
+}
+
+.airdrop-main-container .card-header h6 {
+  color: #495057;
+  font-weight: 600;
+  margin: 0;
+}
+
+.airdrop-main-container .card-body {
+  padding: 1.5rem;
+}
+
+/* Token Info Styles */
+.token-info {
+  background-color: #f8f9fa;
+  border-radius: 6px;
+  padding: 1rem;
+  margin-top: 1rem;
+}
+
+.token-info .row {
+  margin: 0;
+}
+
+.token-info .col-6 {
+  padding: 0.5rem;
+}
+
+.token-info small {
+  font-size: 0.75rem;
+  color: #6c757d;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.token-info .fw-bold {
+  color: #495057;
+  font-size: 1rem;
+}
+
+/* Form Styles */
+.airdrop-main-container .form-label {
+  font-weight: 600;
+  color: #495057;
+  margin-bottom: 0.5rem;
+}
+
+.airdrop-main-container .form-control {
+  border: 2px solid #e9ecef;
+  border-radius: 6px;
+  padding: 0.75rem;
+  transition: all 0.3s ease;
+}
+
+.airdrop-main-container .form-control:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+.airdrop-main-container .form-control.is-invalid {
+  border-color: #dc3545;
+}
+
+.airdrop-main-container .invalid-feedback {
+  font-size: 0.875rem;
+  color: #dc3545;
+  margin-top: 0.25rem;
+}
+
+/* Preview Data Styles */
+.preview-data {
+  padding: 1rem 0;
+}
+
+.preview-data h6 {
+  color: #495057;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #e9ecef;
+}
+
+.summary-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid #f1f3f4;
+}
+
+.summary-item:last-child {
+  border-bottom: none;
+}
+
+.summary-item span:first-child {
+  color: #6c757d;
+  font-weight: 500;
+}
+
+.summary-item .fw-bold {
+  color: #495057;
+  font-size: 1.1rem;
+}
+
+.summary-item.text-success .fw-bold {
+  color: #28a745;
+}
+
+.summary-item.text-danger .fw-bold {
+  color: #dc3545;
+}
+
+/* Button Styles */
+.airdrop-main-container .btn {
+  border-radius: 6px;
+  font-weight: 500;
+  padding: 0.75rem 1.5rem;
+  transition: all 0.3s ease;
+  /* Touch-friendly minimum size */
+  min-height: 44px;
+  min-width: 44px;
+}
+
+.airdrop-main-container .btn-primary {
+  background-color: #007bff;
+  border-color: #007bff;
+}
+
+.airdrop-main-container .btn-primary:hover {
+  background-color: #0056b3;
+  border-color: #0056b3;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0, 123, 255, 0.3);
+}
+
+.airdrop-main-container .btn-success {
+  background-color: #28a745;
+  border-color: #28a745;
+}
+
+.airdrop-main-container .btn-success:hover {
+  background-color: #1e7e34;
+  border-color: #1e7e34;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(40, 167, 69, 0.3);
+}
+
+.airdrop-main-container .btn-outline-secondary {
+  color: #6c757d;
+  border-color: #6c757d;
+}
+
+.airdrop-main-container .btn-outline-secondary:hover {
+  background-color: #6c757d;
+  border-color: #6c757d;
+  color: white;
+}
+
+.airdrop-main-container .btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+/* Advanced Settings */
+.airdrop-main-container .btn-link {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: 500;
+  /* Touch-friendly for mobile */
+  padding: 0.5rem;
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+}
+
+.airdrop-main-container .btn-link:hover {
+  color: #0056b3;
+  text-decoration: underline;
+}
+
+/* Alert Styles */
+.airdrop-main-container .alert {
+  border: none;
+  border-radius: 6px;
+  padding: 1rem 1.25rem;
+  margin-top: 1rem;
+}
+
+.airdrop-main-container .alert-warning {
+  background-color: #fff3cd;
+  color: #856404;
+  border-left: 4px solid #ffc107;
+}
+
+.airdrop-main-container .alert i {
+  font-size: 1rem;
+}
+
+/* Loading States */
+.airdrop-main-container .spinner-border {
+  width: 1rem;
+  height: 1rem;
+}
+
+.airdrop-main-container .spinner-border-sm {
+  width: 0.875rem;
+  height: 0.875rem;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .airdrop-main-container {
+    padding: 0.5rem;
+  }
+
+  /* Progress Steps - Mobile Layout */
+  .step-indicator {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .step-indicator::before {
+    display: none;
+  }
+
+  .step {
+    flex-direction: row;
+    gap: 0.5rem;
+    padding: 0;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .step-number {
+    margin-bottom: 0;
+    width: 36px;
+    height: 36px;
+    font-size: 0.875rem;
+  }
+
+  .step-label {
+    font-size: 0.8rem;
+  }
+
+  /* Card Layout - Mobile */
+  .airdrop-main-container .card-body {
+    padding: 1rem;
+  }
+
+  .airdrop-main-container .card-header {
+    padding: 0.75rem 1rem;
+  }
+
+  /* Form Controls - Mobile */
+  .airdrop-main-container .form-control {
+    padding: 0.875rem;
+    font-size: 16px; /* Prevent zoom on iOS */
+  }
+
+  .airdrop-main-container .form-label {
+    font-size: 0.9rem;
+  }
+
+  /* Preview Data - Mobile */
+  .preview-data .row {
+    flex-direction: column;
+  }
+
+  .preview-data .col-md-6 {
+    margin-bottom: 1rem;
+  }
+
+  .summary-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.25rem;
+    padding: 0.5rem 0;
+  }
+
+  .summary-item .fw-bold {
+    font-size: 1rem;
+  }
+
+  /* Buttons - Mobile */
+  .airdrop-main-container .btn {
+    width: 100%;
+    margin-bottom: 0.5rem;
+    padding: 0.875rem 1rem;
+    font-size: 1rem;
+  }
+
+  .airdrop-main-container .btn + .btn {
+    margin-left: 0;
+  }
+
+  /* Token Info - Mobile */
+  .token-info .col-6 {
+    padding: 0.25rem;
+  }
+
+  .token-info .fw-bold {
+    font-size: 0.9rem;
+  }
+
+  /* Advanced Settings - Mobile */
+  .airdrop-main-container .card-body .row {
+    flex-direction: column;
+  }
+
+  .airdrop-main-container .card-body .col-md-3 {
+    margin-bottom: 1rem;
+  }
+
+  /* Validation Status - Mobile */
+  .preview-data .row .col-md-3 {
+    margin-bottom: 1rem;
+  }
+
+  .preview-data .badge {
+    font-size: 0.875rem !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .airdrop-main-container {
+    padding: 0.25rem;
+  }
+
+  /* Progress Steps - Small Mobile */
+  .step-number {
+    width: 32px;
+    height: 32px;
+    font-size: 0.8rem;
+  }
+
+  .step-label {
+    font-size: 0.75rem;
+  }
+
+  /* Card Layout - Small Mobile */
+  .airdrop-main-container .card-header {
+    padding: 0.5rem 0.75rem;
+  }
+
+  .airdrop-main-container .card-body {
+    padding: 0.75rem;
+  }
+
+  /* Form Controls - Small Mobile */
+  .airdrop-main-container .form-control {
+    padding: 0.75rem;
+    font-size: 16px;
+  }
+
+  .airdrop-main-container .form-label {
+    font-size: 0.85rem;
+  }
+
+  /* Preview Data - Small Mobile */
+  .preview-data h6 {
+    font-size: 1rem;
+  }
+
+  .summary-item {
+    padding: 0.4rem 0;
+  }
+
+  .summary-item .fw-bold {
+    font-size: 0.9rem;
+  }
+
+  /* Buttons - Small Mobile */
+  .airdrop-main-container .btn {
+    padding: 0.75rem 0.875rem;
+    font-size: 0.9rem;
+    min-height: 48px; /* Larger touch target */
+  }
+
+  /* Token Info - Small Mobile */
+  .token-info {
+    padding: 0.75rem;
+  }
+
+  .token-info .col-6 {
+    padding: 0.2rem;
+  }
+
+  .token-info .fw-bold {
+    font-size: 0.85rem;
+  }
+
+  /* Alert - Small Mobile */
+  .airdrop-main-container .alert {
+    padding: 0.75rem 1rem;
+    font-size: 0.9rem;
+  }
+
+  /* Modal - Small Mobile */
+  .modal-dialog {
+    margin: 0.5rem;
+    max-width: calc(100% - 1rem);
+  }
+
+  .modal-body {
+    padding: 1rem 0.75rem;
+  }
+}
+
+/* Touch-friendly interactions */
+@media (hover: none) and (pointer: coarse) {
+  /* Remove hover effects on touch devices */
+  .airdrop-main-container .card:hover {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .airdrop-main-container .btn:hover {
+    transform: none;
+    box-shadow: none;
+  }
+
+  /* Add active states for touch */
+  .airdrop-main-container .btn:active {
+    transform: scale(0.98);
+  }
+
+  /* Larger touch targets */
+  .airdrop-main-container .btn-link {
+    min-height: 48px;
+    min-width: 48px;
+  }
+
+  .airdrop-main-container .form-control {
+    min-height: 48px;
+  }
+}
+
+/* Fast loading optimizations */
+.airdrop-main-container {
+  /* Optimize for mobile networks */
+  contain: layout style;
+}
+
+.airdrop-main-container .card {
+  /* Reduce repaints */
+  contain: layout style paint;
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .airdrop-main-container .card {
+    border: 2px solid #000;
+  }
+
+  .airdrop-main-container .btn {
+    border-width: 2px;
+  }
+
+  .airdrop-main-container .form-control {
+    border-width: 2px;
+  }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  .airdrop-main-container {
+    background-color: #1a1a1a;
+    color: #ffffff;
+  }
+
+  .airdrop-main-container .card {
+    background-color: #2d2d2d;
+    border-color: #404040;
+  }
+
+  .airdrop-main-container .card-header {
+    background-color: #404040;
+    border-bottom-color: #505050;
+  }
+
+  .airdrop-main-container .form-control {
+    background-color: #404040;
+    border-color: #505050;
+    color: #ffffff;
+  }
+
+  .airdrop-main-container .form-control:focus {
+    background-color: #404040;
+    border-color: #007bff;
+  }
+}
+
+/* Animation for step transitions */
+.step-content {
+  position: relative;
+}
+
+.step-content::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, transparent, rgba(0, 123, 255, 0.05), transparent);
+  animation: shimmer 2s infinite;
+  pointer-events: none;
+}
+
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+/* Focus styles for accessibility */
+.airdrop-main-container .form-control:focus,
+.airdrop-main-container .btn:focus {
+  outline: 2px solid #007bff;
+  outline-offset: 2px;
+}
+
+/* Custom scrollbar */
+.airdrop-main-container ::-webkit-scrollbar {
+  width: 6px;
+}
+
+.airdrop-main-container ::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 3px;
+}
+
+.airdrop-main-container ::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 3px;
+}
+
+.airdrop-main-container ::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
+}
+
+/* Reduced motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+  .step-content,
+  .airdrop-main-container .btn,
+  .airdrop-main-container .card {
+    transition: none;
+  }
+  
+  .step-content::before {
+    animation: none;
+  }
+} 

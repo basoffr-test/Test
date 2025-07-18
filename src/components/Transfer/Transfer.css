@@ -1,12 +1,17 @@
+/* Transfer Component Styles - Updated for AirdropMain Integration */
+
 .eth_transfer {
   display: flex;
+  flex-direction: column;
   margin-bottom: 2em;
   margin-top: 2em;
   margin-left: 1em;
-  align-items: center;
-  justify-content: space-between;
+  margin-right: 1em;
+  width: 100%;
+  max-width: 1200px;
 }
 
+/* Legacy styles for backward compatibility */
 ._ethamount {
   width: 371px !important;
 }
@@ -27,4 +32,70 @@
   display: flex;
   margin-left: 2em;
   align-items: center;
+}
+
+/* Legacy info display */
+.legacy-info {
+  margin-bottom: 1rem;
+}
+
+.legacy-info .alert {
+  border-radius: 6px;
+  border: none;
+  padding: 0.75rem 1rem;
+}
+
+.legacy-info .alert-info {
+  background-color: #d1ecf1;
+  color: #0c5460;
+  border-left: 4px solid #17a2b8;
+}
+
+.legacy-info .alert i {
+  font-size: 1rem;
+}
+
+.legacy-info .alert strong {
+  font-weight: 600;
+}
+
+.legacy-info .alert small {
+  font-size: 0.875rem;
+  opacity: 0.8;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .eth_transfer {
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+  }
+  
+  ._ethamount,
+  ._perwallets,
+  .sleeptime {
+    width: 100% !important;
+    margin-left: 0;
+    margin-bottom: 1rem;
+  }
+  
+  .transfer_btn {
+    margin-left: 0;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 576px) {
+  .eth_transfer {
+    margin-left: 0.25em;
+    margin-right: 0.25em;
+  }
+  
+  .legacy-info .alert {
+    padding: 0.5rem 0.75rem;
+  }
+  
+  .legacy-info .alert small {
+    font-size: 0.8rem;
+  }
 }

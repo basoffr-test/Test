@@ -1,25 +1,17 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable react-hooks/rules-of-hooks */
 import Table from "react-bootstrap/Table";
-import Pagination from "react-bootstrap/Pagination";
 import Button from "react-bootstrap/Button";
-import InputGroup from "react-bootstrap/InputGroup";
-import Form from "react-bootstrap/Form";
 import { useEffect, useState } from "react";
 import "./style.css";
 
 const SenderTable = (props) => {
-  let indexOfLastItem;
-  let indexOfFirstItem;
-  let currentItems;
   const { wallets, setWallets, isConnected } = props;
   const { currentPage, setCurrentPage } = useState(1);
   const [itemPerPage] = useState(5);
 
   useEffect(() => {
-    indexOfLastItem = currentPage * itemPerPage;
-    indexOfFirstItem = indexOfLastItem - itemPerPage;
-    currentItems = wallets && wallets.slice(indexOfFirstItem, indexOfLastItem);
+    // This effect is kept for potential future pagination implementation
   }, [wallets, currentPage]);
 
   const handlePageChange = (pageNumber) => {

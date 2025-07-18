@@ -1,0 +1,180 @@
+# Environment Variables Example
+# Copy this file to .env.local and fill in your actual values
+
+# =============================================================================
+# BLOCKCHAIN CONFIGURATION
+# =============================================================================
+
+# Infura Project ID (required for network connections)
+# Get your project ID from: https://infura.io/dashboard
+REACT_APP_INFURA_PROJECT_ID=your_infura_project_id_here
+
+# Default network for the application
+# Options: 1 (mainnet), 11155111 (sepolia), 137 (polygon), 80001 (mumbai)
+REACT_APP_DEFAULT_NETWORK_ID=11155111
+
+# =============================================================================
+# API CONFIGURATION (Optional - if backend is implemented)
+# =============================================================================
+
+# Backend API URL
+REACT_APP_API_URL=http://localhost:3001
+
+# API timeout in milliseconds
+REACT_APP_API_TIMEOUT=10000
+
+# =============================================================================
+# APPLICATION CONFIGURATION
+# =============================================================================
+
+# Application environment
+NODE_ENV=development
+
+# Enable/disable console logging
+REACT_APP_ENABLE_LOGS=true
+
+# Mock MetaMask for testing (development only)
+REACT_APP_MOCK_METAMASK=false
+
+# Skip certain validations in development
+REACT_APP_SKIP_VALIDATIONS=false
+
+# Maximum file size for CSV uploads (in MB)
+REACT_APP_MAX_FILE_SIZE_MB=5
+
+# Maximum number of addresses per airdrop
+REACT_APP_MAX_ADDRESSES=1000
+
+# =============================================================================
+# SECURITY CONFIGURATION
+# =============================================================================
+
+# IMPORTANT: NEVER put private keys or sensitive data in environment variables
+# that start with REACT_APP_ as they will be included in the client bundle
+
+# For server-side operations only (if backend is implemented):
+# PRIVATE_KEY=your_private_key_here (SERVER SIDE ONLY)
+# JWT_SECRET=your_jwt_secret_here (SERVER SIDE ONLY)
+
+# =============================================================================
+# OPTIONAL SERVICES
+# =============================================================================
+
+# Analytics tracking ID (optional)
+REACT_APP_GA_TRACKING_ID=your_google_analytics_id
+
+# Error reporting service (optional)
+REACT_APP_SENTRY_DSN=your_sentry_dsn
+
+# =============================================================================
+# DEVELOPMENT TOOLS
+# =============================================================================
+
+# Enable React DevTools
+REACT_APP_DEV_TOOLS=true
+
+# Enable Redux DevTools (if using Redux)
+REACT_APP_REDUX_DEV_TOOLS=true
+
+# =============================================================================
+# NETWORK-SPECIFIC CONFIGURATIONS
+# =============================================================================
+
+# Custom RPC URLs (optional - overrides Infura)
+REACT_APP_ETHEREUM_RPC_URL=https://mainnet.infura.io/v3/your_project_id
+REACT_APP_SEPOLIA_RPC_URL=https://sepolia.infura.io/v3/your_project_id
+REACT_APP_POLYGON_RPC_URL=https://polygon-mainnet.infura.io/v3/your_project_id
+
+# Block explorer URLs (optional - for custom networks)
+REACT_APP_ETHEREUM_EXPLORER=https://etherscan.io
+REACT_APP_SEPOLIA_EXPLORER=https://sepolia.etherscan.io
+REACT_APP_POLYGON_EXPLORER=https://polygonscan.com
+
+# =============================================================================
+# FEATURE FLAGS
+# =============================================================================
+
+# Enable/disable specific features
+REACT_APP_ENABLE_BATCH_TRANSFERS=true
+REACT_APP_ENABLE_TOKEN_APPROVAL=true
+REACT_APP_ENABLE_GAS_ESTIMATION=true
+REACT_APP_ENABLE_TRANSACTION_HISTORY=true
+
+# =============================================================================
+# PERFORMANCE CONFIGURATION
+# =============================================================================
+
+# Transaction polling interval (milliseconds)
+REACT_APP_POLLING_INTERVAL=2000
+
+# Maximum retry attempts for failed transactions
+REACT_APP_MAX_RETRIES=3
+
+# Delay between retry attempts (milliseconds)
+REACT_APP_RETRY_DELAY=2000
+
+# Batch processing delay (milliseconds)
+REACT_APP_BATCH_DELAY=1000
+
+# =============================================================================
+# UI CONFIGURATION
+# =============================================================================
+
+# Application title
+REACT_APP_TITLE="Wallet Airdrop DApp"
+
+# Application description
+REACT_APP_DESCRIPTION="Secure token airdrop platform with MetaMask integration"
+
+# Theme configuration
+REACT_APP_THEME=light
+
+# Default language
+REACT_APP_DEFAULT_LANGUAGE=en
+
+# =============================================================================
+# EXAMPLES FOR REFERENCE
+# =============================================================================
+
+# Example Infura Project ID format:
+# REACT_APP_INFURA_PROJECT_ID=abc123def456ghi789jkl012mno345pq
+
+# Example API URL for production:
+# REACT_APP_API_URL=https://api.yourapp.com
+
+# Example for enabling mock MetaMask in development:
+# REACT_APP_MOCK_METAMASK=true
+
+# =============================================================================
+# IMPORTANT SECURITY NOTES
+# =============================================================================
+
+# 1. Never commit .env files with real values to version control
+# 2. Use .env.local for local development (automatically ignored by git)
+# 3. Use different .env files for different environments (dev, staging, prod)
+# 4. Regularly rotate API keys and sensitive credentials
+# 5. Only use REACT_APP_ prefix for non-sensitive client-side configuration
+# 6. For production, use your hosting platform's environment variable system
+
+# =============================================================================
+# SETUP INSTRUCTIONS
+# =============================================================================
+
+# 1. Copy this file to .env.local: cp .env.example .env.local
+# 2. Fill in your actual values, especially REACT_APP_INFURA_PROJECT_ID
+# 3. Restart your development server: npm start
+# 4. Verify configuration by checking the console for any missing variables
+
+# =============================================================================
+# TROUBLESHOOTING
+# =============================================================================
+
+# If you get "Cannot resolve module" errors:
+# - Check that all required environment variables are set
+# - Restart your development server after changing .env files
+# - Ensure .env.local is in your project root directory
+
+# If MetaMask connection fails:
+# - Verify REACT_APP_INFURA_PROJECT_ID is correct
+# - Check that MetaMask is installed and unlocked
+# - Ensure you're on a supported network

@@ -3,7 +3,7 @@ import Container from "react-bootstrap/Container";
 import Navbar from "react-bootstrap/Navbar";
 import "./Nav.css";
 // import Logo from "../../assets/Magic200.png";
-import Logo from "../../assets/logo1.jpeg";
+// import Logo from "../../assets/logo1.jpeg";
 
 const Nav = () => {
   return (

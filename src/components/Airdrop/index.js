@@ -1,18 +1,7 @@
-import Button from "react-bootstrap/Button";
+import AirdropMain from './AirdropMain';
 
-const Airdrop = (props) => {
-  const { isConnected, handleAirdrop } = props;
-  console.log("IsConnected------>",isConnected)
+// Export the new AirdropMain component as the default export
+export default AirdropMain;
 
-  return (
-    <Button
-      className="btn btn-success"
-      onClick={handleAirdrop}
-      disabled={!isConnected}
-    >
-      <h3>Airdrop</h3>
-    </Button>
-  );
-};
-
-export default Airdrop;
+// Also export as Airdrop for backward compatibility
+export { AirdropMain as Airdrop };

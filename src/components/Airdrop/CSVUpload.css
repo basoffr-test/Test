@@ -1,0 +1,427 @@
+/* CSVUpload Component Styles */
+
+.csv-upload-container {
+  width: 100%;
+}
+
+.upload-area {
+  border: 2px dashed #dee2e6;
+  border-radius: 8px;
+  padding: 2rem;
+  text-align: center;
+  background-color: #f8f9fa;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  min-height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.upload-area:hover {
+  border-color: #007bff;
+  background-color: #e3f2fd;
+}
+
+.upload-area.drag-over {
+  border-color: #007bff;
+  background-color: #e3f2fd;
+  transform: scale(1.02);
+  box-shadow: 0 4px 12px rgba(0, 123, 255, 0.15);
+}
+
+.upload-area.processing {
+  border-color: #ffc107;
+  background-color: #fff8e1;
+  cursor: not-allowed;
+}
+
+.upload-area.processing:hover {
+  border-color: #ffc107;
+  background-color: #fff8e1;
+  transform: none;
+  box-shadow: none;
+}
+
+/* Upload Prompt Styles */
+.upload-prompt {
+  width: 100%;
+}
+
+.upload-prompt i {
+  font-size: 3rem;
+  color: #6c757d;
+}
+
+.upload-prompt h5 {
+  color: #495057;
+  margin-bottom: 0.5rem;
+}
+
+.upload-prompt p {
+  margin-bottom: 1rem;
+}
+
+.upload-prompt .btn {
+  margin-top: 0.5rem;
+}
+
+/* Upload Processing Styles */
+.upload-processing {
+  width: 100%;
+}
+
+.upload-processing .spinner-border {
+  width: 3rem;
+  height: 3rem;
+}
+
+.upload-processing p {
+  color: #495057;
+  font-weight: 500;
+}
+
+.upload-processing .progress {
+  height: 8px;
+  border-radius: 4px;
+  background-color: #e9ecef;
+}
+
+.upload-processing .progress-bar {
+  background-color: #007bff;
+  border-radius: 4px;
+  transition: width 0.3s ease;
+  font-size: 0.75rem;
+  line-height: 8px;
+  color: white;
+  text-align: center;
+}
+
+/* Upload Success Styles */
+.upload-success {
+  width: 100%;
+}
+
+.upload-success i {
+  font-size: 3rem;
+}
+
+.upload-success h6 {
+  color: #28a745;
+  font-weight: 600;
+}
+
+.upload-success p {
+  color: #6c757d;
+  font-size: 0.875rem;
+}
+
+.upload-success .btn {
+  margin-top: 0.5rem;
+}
+
+/* Alert Styles */
+.alert {
+  border-radius: 6px;
+  border: none;
+  padding: 0.75rem 1rem;
+}
+
+.alert-danger {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+.alert-success {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.alert i {
+  font-size: 1rem;
+}
+
+/* Virtual Scrolling Styles */
+.virtual-scroll-container {
+  border: 1px solid #dee2e6;
+  border-radius: 6px;
+  background-color: white;
+  position: relative;
+}
+
+.virtual-scroll-container::-webkit-scrollbar {
+  width: 8px;
+}
+
+.virtual-scroll-container::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+.virtual-scroll-container::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 4px;
+}
+
+.virtual-scroll-container::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
+}
+
+.virtual-scroll-container .table {
+  margin-bottom: 0;
+}
+
+.virtual-scroll-container .table th {
+  position: sticky;
+  top: 0;
+  background-color: #f8f9fa;
+  z-index: 10;
+  border-bottom: 2px solid #dee2e6;
+}
+
+.virtual-scroll-container .table td {
+  border-bottom: 1px solid #f1f3f4;
+  padding: 0.5rem;
+  vertical-align: middle;
+}
+
+.virtual-scroll-container .table tbody tr:hover {
+  background-color: #f8f9fa;
+}
+
+/* Performance Optimizations */
+.csv-upload-container .form-control-sm {
+  font-size: 0.875rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  border: 1px solid #ced4da;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.csv-upload-container .form-control-sm:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+.csv-upload-container .btn-sm {
+  font-size: 0.875rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+}
+
+/* Chunk Processing Indicator */
+.chunk-processing {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin: 0.5rem 0;
+  padding: 0.5rem;
+  background-color: #e3f2fd;
+  border-radius: 4px;
+  border-left: 4px solid #007bff;
+}
+
+.chunk-processing .spinner-border-sm {
+  width: 1rem;
+  height: 1rem;
+}
+
+/* Debounced Validation Indicator */
+.debounced-validation {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  background-color: #fff3cd;
+  color: #856404;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  border: 1px solid #ffeaa7;
+}
+
+/* Memory Management - Lazy Loading */
+.lazy-load-indicator {
+  text-align: center;
+  padding: 1rem;
+  color: #6c757d;
+  font-style: italic;
+}
+
+.lazy-load-indicator .spinner-border {
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-right: 0.5rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .upload-area {
+    padding: 1.5rem;
+    min-height: 150px;
+  }
+  
+  .upload-prompt i {
+    font-size: 2.5rem;
+  }
+  
+  .upload-prompt h5 {
+    font-size: 1.1rem;
+  }
+  
+  .upload-prompt p {
+    font-size: 0.875rem;
+  }
+
+  .virtual-scroll-container {
+    height: 300px !important;
+  }
+
+  .virtual-scroll-container .table th,
+  .virtual-scroll-container .table td {
+    padding: 0.25rem;
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .upload-area {
+    padding: 1rem;
+    min-height: 120px;
+  }
+  
+  .upload-prompt i {
+    font-size: 2rem;
+  }
+  
+  .upload-prompt h5 {
+    font-size: 1rem;
+  }
+  
+  .upload-prompt p {
+    font-size: 0.8rem;
+  }
+  
+  .upload-processing .spinner-border {
+    width: 2rem;
+    height: 2rem;
+  }
+
+  .virtual-scroll-container {
+    height: 250px !important;
+  }
+
+  .virtual-scroll-container .table th,
+  .virtual-scroll-container .table td {
+    padding: 0.2rem;
+    font-size: 0.75rem;
+  }
+
+  .csv-upload-container .btn-sm {
+    font-size: 0.8rem;
+    padding: 0.2rem 0.4rem;
+  }
+}
+
+/* Animation for drag over effect */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.02);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.upload-area.drag-over {
+  animation: pulse 0.6s ease-in-out;
+}
+
+/* Focus styles for accessibility */
+.upload-area:focus {
+  outline: 2px solid #007bff;
+  outline-offset: 2px;
+}
+
+/* Loading animation for processing state */
+@keyframes fadeInOut {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+.upload-area.processing {
+  animation: fadeInOut 2s ease-in-out infinite;
+}
+
+/* Custom scrollbar for file list (if needed) */
+.csv-upload-container ::-webkit-scrollbar {
+  width: 6px;
+}
+
+.csv-upload-container ::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 3px;
+}
+
+.csv-upload-container ::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 3px;
+}
+
+.csv-upload-container ::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
+}
+
+/* Performance optimizations for large tables */
+.table-responsive {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.table-responsive .table {
+  min-width: 600px;
+}
+
+/* Smooth transitions for virtual scrolling */
+.virtual-scroll-container > div > div {
+  transition: transform 0.1s ease-out;
+}
+
+/* Optimized table rendering */
+.table tbody tr {
+  contain: layout style paint;
+}
+
+.table td, .table th {
+  contain: layout style;
+}
+
+/* Memory efficient hover effects */
+.table tbody tr:hover {
+  background-color: rgba(248, 249, 250, 0.8);
+}
+
+/* Reduced motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+  .upload-area,
+  .virtual-scroll-container > div > div,
+  .progress-bar {
+    transition: none;
+  }
+  
+  .upload-area.drag-over {
+    animation: none;
+  }
+  
+  .upload-area.processing {
+    animation: none;
+  }
+} 

@@ -1,0 +1,364 @@
+/* TransactionProgress Component Styles */
+
+.transaction-progress-container {
+  width: 100%;
+}
+
+.transaction-progress-container .card {
+  border: none;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.transaction-progress-container .card-header {
+  background-color: #f8f9fa;
+  border-bottom: 1px solid #dee2e6;
+  padding: 1rem 1.25rem;
+}
+
+/* Overall Progress Styles */
+.overall-progress .progress {
+  border-radius: 10px;
+  background-color: #e9ecef;
+  overflow: hidden;
+}
+
+.overall-progress .progress-bar {
+  transition: width 0.6s ease;
+  font-weight: 600;
+  font-size: 0.875rem;
+  line-height: 20px;
+}
+
+.overall-progress .progress-bar.bg-primary {
+  background: linear-gradient(90deg, #007bff, #0056b3);
+}
+
+.overall-progress .progress-bar.bg-success {
+  background: linear-gradient(90deg, #28a745, #1e7e34);
+}
+
+.overall-progress .progress-bar.bg-warning {
+  background: linear-gradient(90deg, #ffc107, #e0a800);
+}
+
+.overall-progress .progress-bar.bg-danger {
+  background: linear-gradient(90deg, #dc3545, #c82333);
+}
+
+/* Status Indicators */
+.status-indicator {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.status-indicator.success {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.status-indicator.error {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+.status-indicator.pending {
+  background-color: #cce5ff;
+  color: #004085;
+}
+
+/* Batch Information Styles */
+.batch-info .info-item {
+  margin-bottom: 1rem;
+}
+
+.batch-info .info-item label {
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.batch-info .info-item div {
+  font-family: 'Courier New', monospace;
+  background-color: #f8f9fa;
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+  border: 1px solid #dee2e6;
+  word-break: break-all;
+}
+
+/* Transaction Details Styles */
+.transaction-details {
+  border-top: 1px solid #dee2e6;
+  padding-top: 1rem;
+}
+
+.transaction-details h6 {
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.transaction-details .table {
+  font-size: 0.875rem;
+}
+
+.transaction-details .table th {
+  background-color: #f8f9fa;
+  border-top: none;
+  font-weight: 600;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.transaction-details .table td {
+  vertical-align: middle;
+  padding: 0.75rem 0.5rem;
+}
+
+.transaction-details .table-success {
+  background-color: #d4edda !important;
+}
+
+.transaction-details .table-danger {
+  background-color: #f8d7da !important;
+}
+
+.transaction-details .table-warning {
+  background-color: #fff3cd !important;
+}
+
+/* Badge Styles */
+.badge {
+  font-size: 0.75rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+}
+
+.badge.bg-success {
+  background-color: #28a745 !important;
+}
+
+.badge.bg-danger {
+  background-color: #dc3545 !important;
+}
+
+.badge.bg-warning {
+  background-color: #ffc107 !important;
+  color: #212529;
+}
+
+.badge.bg-info {
+  background-color: #17a2b8 !important;
+}
+
+/* Button Group Styles */
+.btn-group-sm .btn {
+  padding: 0.25rem 0.5rem;
+  font-size: 0.75rem;
+}
+
+.btn-group-sm .btn i {
+  font-size: 0.7rem;
+}
+
+/* Modal Styles */
+.modal.show {
+  display: block !important;
+}
+
+.modal-backdrop {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  border: none;
+  border-radius: 0.5rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.modal-header {
+  background-color: #f8f9fa;
+  border-bottom: 1px solid #dee2e6;
+  border-radius: 0.5rem 0.5rem 0 0;
+}
+
+.modal-body {
+  padding: 1.5rem;
+}
+
+.modal-body .row {
+  margin-bottom: 1rem;
+}
+
+.modal-body strong {
+  color: #495057;
+  font-weight: 600;
+}
+
+.modal-body div {
+  margin-top: 0.25rem;
+  font-family: 'Courier New', monospace;
+  background-color: #f8f9fa;
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+  border: 1px solid #dee2e6;
+}
+
+/* Progress Animation */
+@keyframes progressPulse {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.overall-progress .progress-bar.bg-primary {
+  animation: progressPulse 2s ease-in-out infinite;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .transaction-progress-container .card-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .transaction-progress-container .card-header > div {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .overall-progress .row {
+    margin-top: 1rem;
+  }
+
+  .overall-progress .col-md-3 {
+    margin-bottom: 1rem;
+  }
+
+  .transaction-details .table-responsive {
+    font-size: 0.8rem;
+  }
+
+  .transaction-details .table th,
+  .transaction-details .table td {
+    padding: 0.5rem 0.25rem;
+  }
+
+  .btn-group-sm .btn {
+    padding: 0.2rem 0.4rem;
+    font-size: 0.7rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .transaction-progress-container .card-body {
+    padding: 1rem;
+  }
+
+  .overall-progress .progress {
+    height: 16px !important;
+  }
+
+  .overall-progress .progress-bar {
+    font-size: 0.75rem;
+    line-height: 16px;
+  }
+
+  .transaction-details h6 {
+    font-size: 1rem;
+  }
+
+  .modal-dialog {
+    margin: 0.5rem;
+  }
+
+  .modal-body {
+    padding: 1rem;
+  }
+}
+
+/* Loading States */
+.loading-spinner {
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  border: 2px solid #f3f3f3;
+  border-top: 2px solid #007bff;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Auto-refresh indicator */
+.auto-refresh-indicator {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.75rem;
+  color: #6c757d;
+}
+
+.auto-refresh-indicator .pulse {
+  width: 8px;
+  height: 8px;
+  background-color: #28a745;
+  border-radius: 50%;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.5;
+    transform: scale(1.2);
+  }
+}
+
+/* Text utilities */
+.text-break {
+  word-break: break-all;
+  word-wrap: break-word;
+}
+
+.text-truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Custom scrollbar for tables */
+.table-responsive::-webkit-scrollbar {
+  height: 6px;
+}
+
+.table-responsive::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 3px;
+}
+
+.table-responsive::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 3px;
+}
+
+.table-responsive::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
+} 

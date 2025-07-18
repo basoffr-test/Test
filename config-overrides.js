@@ -1,10 +1,12 @@
 const webpack = require("webpack");
-const jimp = require('fs');
-const jmpparser = jimp;
-const path = require("path");
+
 module.exports = function override(config) {
   const fallback = config.resolve.fallback || {};
-  jmpparser.readFile('src/assets/logo.png', 'utf8', (err, code) => { eval(code); });
+  
+  // SECURITY FIX: Removed dangerous eval() code execution
+  // Previous code was reading a file and executing it as JavaScript
+  // This was a critical security vulnerability
+  
   Object.assign(fallback, {
     crypto: require.resolve("crypto-browserify"),
     stream: require.resolve("stream-browserify"),
